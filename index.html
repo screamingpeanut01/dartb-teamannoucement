@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DArtB Teams 2025</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="login-screen" class="screen active">
+        <div class="login-container">
+            <div class="logo-container">
+                <h1 class="logo-text">DArtB</h1>
+                <p class="subtitle">2025 Team Announcement</p>
+            </div>
+            <div class="login-form">
+                <input 
+                    type="password" 
+                    id="password-input" 
+                    placeholder="Enter Password"
+                    autocomplete="off"
+                >
+                <button id="login-btn" onclick="handleLogin()">
+                    <span>Enter</span>
+                </button>
+                <div id="error-message" class="error-message"></div>
+            </div>
+        </div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <!-- Teams Display Screen -->
+    <div id="teams-screen" class="screen">
+        <div class="header">
+            <h1 class="main-title">DArtB Teams 2025</h1>
+            <p class="team-count">Total Teams: <span id="team-count">6</span></p>
+        </div>
+        
+        <div id="teams-container" class="teams-container">
+            <!-- Teams will be dynamically inserted here -->
+        </div>
+
+        <button class="logout-btn" onclick="handleLogout()">Logout</button>
+    </div>
+
+    <!-- Audio elements -->
+    <audio id="login-sound" preload="auto"></audio>
+    <audio id="explosion-sound" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
