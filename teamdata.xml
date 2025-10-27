@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DArtB_Teams>
-  
-  <!-- AI 팀 -->
   <Team id="1" name="AI" memberCount="6" seniors="2" juniors="4">
     <Domain>AI</Domain>
-    <Topics>AI 모델 신뢰성, 할루시네이션, 생성형 AI 응용</Topics>
+    <Topics>AI 모델 신뢰성, 생성형 AI, AI 응용</Topics>
     <Members>
       <Member>
         <Name>이지민</Name>
@@ -16,7 +14,7 @@
         <Name>이승화</Name>
         <Generation>5기</Generation>
         <Role>S</Role>
-        <Details>1지망: AI</Details>
+        <Details>1지망: AI, 주제: - AI 붕괴 / - AI 의 신뢰성에 대한 분석</Details>
       </Member>
       <Member>
         <Name>이예령</Name>
@@ -28,71 +26,69 @@
         <Name>동규서</Name>
         <Generation>6기</Generation>
         <Role>J</Role>
-        <Details>1지망: AI</Details>
+        <Details>1지망: AI, 주제: AI(DART)</Details>
       </Member>
       <Member>
         <Name>전병욱</Name>
         <Generation>6기</Generation>
         <Role>J</Role>
-        <Details>3지망: AI (1지망: 금융)</Details>
+        <Details>3지망: AI, 주제: 생성형 ai (3)</Details>
       </Member>
       <Member>
         <Name>김민서</Name>
         <Generation>6기</Generation>
         <Role>J</Role>
-        <Details>3지망: AI (1지망: 마케팅)</Details>
+        <Details>3지망: AI (3)</Details>
       </Member>
     </Members>
   </Team>
-  
-  <!-- 물류/반도체 팀 -->
-  <Team id="2" name="물류/반도체" memberCount="6" seniors="3" juniors="3">
+
+  <Team id="2" name="물류" memberCount="6" seniors="2" juniors="4">
     <Domain>물류/무역, 반도체</Domain>
-    <Topics>물류 최적화, 반도체 공정, 수요 예측</Topics>
+    <Topics>EOQ 전략, SCM, 물류 최적화</Topics>
     <Members>
       <Member>
         <Name>강다훈</Name>
         <Generation>5기</Generation>
         <Role>S</Role>
-        <Details>3지망: 물류/무역 (1지망: 반도체)</Details>
+        <Details>1지망: 반도체, 주제: 반도체 수율 관련</Details>
       </Member>
       <Member>
         <Name>김채은</Name>
         <Generation>5기</Generation>
         <Role>S</Role>
-        <Details>3지망: 물류/무역 (1지망: AI)</Details>
+        <Details>3지망: 물류/무역, 주제: s/c/m (3)</Details>
       </Member>
       <Member>
         <Name>한혜인</Name>
-        <Generation>5기</Generation>
-        <Role>S</Role>
+        <Generation>6기</Generation>
+        <Role>J</Role>
         <Details>1지망: 물류/무역</Details>
       </Member>
       <Member>
         <Name>김현수</Name>
         <Generation>6기</Generation>
         <Role>J</Role>
-        <Details>1지망: 물류/무역</Details>
+        <Details>1지망: 물류/무역, 주제: EOQ</Details>
       </Member>
       <Member>
         <Name>후영리</Name>
         <Generation>6기</Generation>
         <Role>J</Role>
-        <Details>2지망: 물류/무역 (1지망: 금융)</Details>
+        <Details>2지망: 물류/무역 (2)</Details>
       </Member>
       <Member>
         <Name>박진아</Name>
         <Generation>6기</Generation>
         <Role>J</Role>
-        <Details>3지망: 물류/무역 (1지망: 반도체)</Details>
+        <Details>3지망: 반도체 (3-반도체)</Details>
       </Member>
     </Members>
   </Team>
-  
-  <!-- 금융 팀 -->
-  <Team id="3" name="금융" memberCount="6" seniors="1" juniors="5">
+
+  <Team id="3" name="금융" memberCount="6" seniors="2" juniors="4">
     <Domain>금융</Domain>
-    <Topics>금융 상품 추천, 포트폴리오 관리, 리스크</Topics>
+    <Topics>포트폴리오 관리, 리스크 관리, 디지털 금융</Topics>
     <Members>
       <Member>
         <Name>김민준</Name>
@@ -102,97 +98,95 @@
       </Member>
       <Member>
         <Name>박정우</Name>
-        <Generation>6기</Generation>
-        <Role>J</Role>
-        <Details>1지망: 금융</Details>
+        <Generation>5기</Generation>
+        <Role>S</Role>
+        <Details>1지망: 금융, 주제: 금융트렌드 및 동향</Details>
       </Member>
       <Member>
         <Name>함규영</Name>
         <Generation>6기</Generation>
         <Role>J</Role>
-        <Details>2지망: 금융 (1지망: 엔터테인먼트)</Details>
+        <Details>2지망: 금융 (2인데 1지망 어차피 안열림)</Details>
       </Member>
       <Member>
         <Name>최철원</Name>
         <Generation>6기</Generation>
         <Role>J</Role>
-        <Details>1지망: 금융</Details>
+        <Details>1지망: 금융, 주제: 재무제표</Details>
       </Member>
       <Member>
         <Name>최진호</Name>
         <Generation>6기</Generation>
         <Role>J</Role>
-        <Details>1지망: 금융</Details>
+        <Details>1지망: 금융, 주제: "고령층의 모바일뱅킹 이용률과 금융사기 피해율의 관계 / 디지털금융 수용 수준에 따른 세대 간 소비패턴 차이 / 고령층의 ‘비대면 금융 거래 불안감’에 영향을 미치는 요인 분석"</Details>
       </Member>
       <Member>
         <Name>윤재원</Name>
         <Generation>6기</Generation>
         <Role>J</Role>
-        <Details>1지망: 금융</Details>
+        <Details>1지망: 금융, 주제: 금융 포트폴리오 및 리스크 관리</Details>
       </Member>
     </Members>
   </Team>
 
-  <!-- 마케팅 팀 -->
-  <Team id="4" name="마케팅" memberCount="6" seniors="3" juniors="3">
+  <Team id="4" name="마케팅" memberCount="6" seniors="1" juniors="5">
     <Domain>마케팅</Domain>
-    <Topics>고객 세분화, 이탈 예측, 광고 효율</Topics>
+    <Topics>고객 세분화, 마케팅 믹스 모델링</Topics>
     <Members>
       <Member>
         <Name>곽주영</Name>
         <Generation>5기</Generation>
         <Role>S</Role>
-        <Details>1지망: 마케팅</Details>
+        <Details>1지망: 마케팅, 주제: MMM</Details>
       </Member>
       <Member>
         <Name>장동혁</Name>
-        <Generation>5기</Generation>
-        <Role>S</Role>
-        <Details>2지망: 마케팅 (1지망: 엔터테인먼트)</Details>
+        <Generation>6기</Generation>
+        <Role>J</Role>
+        <Details>2지망: 마케팅 (2)</Details>
       </Member>
       <Member>
         <Name>조윤서</Name>
-        <Generation>5기</Generation>
-        <Role>S</Role>
-        <Details>1지망: 마케팅</Details>
+        <Generation>6기</Generation>
+        <Role>J</Role>
+        <Details>1지망: 마케팅, 주제: LTV</Details>
       </Member>
       <Member>
         <Name>김경모</Name>
         <Generation>6기</Generation>
         <Role>J</Role>
-        <Details>1지망: 마케팅</Details>
+        <Details>1지망: 마케팅, 주제: 광고 성과</Details>
       </Member>
       <Member>
         <Name>신예운</Name>
         <Generation>6기</Generation>
         <Role>J</Role>
-        <Details>1지망: 마케팅</Details>
+        <Details>1지망: 마케팅, 주제: CRM</Details>
       </Member>
       <Member>
         <Name>장희주</Name>
         <Generation>6기</Generation>
         <Role>J</Role>
-        <Details>1지망: 마케팅</Details>
+        <Details>1지망: 마케팅, 주제: 고객 세분화</Details>
       </Member>
     </Members>
   </Team>
-  
-  <!-- F&B 팀 -->
-  <Team id="5" name="F&amp;B" memberCount="6" seniors="3" juniors="3">
+
+  <Team id="5" name="F&amp;B" memberCount="6" seniors="1" juniors="5">
     <Domain>F&amp;B</Domain>
-    <Topics>수요 예측, 상권 분석, 메뉴 추천</Topics>
+    <Topics>수요 예측, 상권 분석, 메뉴 개발</Topics>
     <Members>
       <Member>
         <Name>김미정</Name>
         <Generation>5기</Generation>
         <Role>S</Role>
-        <Details>1지망: F&amp;B</Details>
+        <Details>1지망: F&amp;B, 주제: 수요예측</Details>
       </Member>
       <Member>
         <Name>김태연</Name>
-        <Generation>5기</Generation>
-        <Role>S</Role>
-        <Details>1지망: F&amp;B</Details>
+        <Generation>6기</Generation>
+        <Role>J</Role>
+        <Details>1지망: F&amp;B, 주제: 상권분석</Details>
       </Member>
       <Member>
         <Name>노동희</Name>
@@ -204,27 +198,26 @@
         <Name>박서현</Name>
         <Generation>6기</Generation>
         <Role>J</Role>
-        <Details>1지망: F&amp;B</Details>
+        <Details>1지망: F&amp;B, 주제: 메뉴개발</Details>
       </Member>
       <Member>
         <Name>신혜성</Name>
-        <Generation>5기</Generation>
-        <Role>S</Role>
-        <Details>2지망: F&amp;B (1지망: AI)</Details>
+        <Generation>6기</Generation>
+        <Role>J</Role>
+        <Details>2지망: F&amp;B (2)</Details>
       </Member>
       <Member>
         <Name>권남정</Name>
         <Generation>6기</Generation>
         <Role>J</Role>
-        <Details>2지망: F&amp;B (1지망: AI)</Details>
+        <Details>3지망: F&amp;B (3)</Details>
       </Member>
     </Members>
   </Team>
-  
-  <!-- 엔터테인먼트 팀 -->
-  <Team id="6" name="엔터테인먼트" memberCount="5" seniors="3" juniors="2">
+
+  <Team id="6" name="엔터" memberCount="5" seniors="2" juniors="3">
     <Domain>엔터테인먼트</Domain>
-    <Topics>콘텐츠 추천, 아티스트 흥행 예측</Topics>
+    <Topics>콘텐츠 흥행 예측, 아티스트 IP</Topics>
     <Members>
       <Member>
         <Name>김권택</Name>
@@ -236,27 +229,27 @@
         <Name>김예린</Name>
         <Generation>5기</Generation>
         <Role>S</Role>
-        <Details>1지망: 엔터테인먼트</Details>
+        <Details>1지망: 엔터테인먼트, 주제: 콘텐츠 흥행 예측</Details>
       </Member>
       <Member>
         <Name>국지희</Name>
         <Generation>6기</Generation>
         <Role>J</Role>
-        <Details>2지망: 엔터테인먼트 (1지망: AI)</Details>
+        <Details>2지망: 엔터테인먼트 (2)</Details>
       </Member>
       <Member>
         <Name>문광윤</Name>
         <Generation>6기</Generation>
         <Role>J</Role>
-        <Details>1지망: 엔터테인먼트</Details>
+        <Details>1지망: 엔터테인먼트, 주제: 앨범 판매량 예측</Details>
       </Member>
       <Member>
         <Name>김채원</Name>
-        <Generation>5기</Generation>
-        <Role>S</Role>
-        <Details>2지망: 엔터테인먼트 (1지망: AI)</Details>
+        <Generation>6기</Generation>
+        <Role>J</Role>
+        <Details>2지망: 엔터테인먼트 (2인데 1지망 어차피 안열림)</Details>
       </Member>
     </Members>
   </Team>
-  
+
 </DArtB_Teams>
