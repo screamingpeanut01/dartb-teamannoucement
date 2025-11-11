@@ -63,21 +63,98 @@ function shuffleArray(array) {
     return shuffled;
 }
 
-// Display teams with random numbering and highlighted members
+// Display teams with animated random numbering and highlighted members
 function displayTeams() {
     teamsContainer.innerHTML = '';
     
     // Shuffle teams for random numbering
     const shuffledTeams = shuffleArray(teamsData);
     
-    // Display all teams simultaneously
-    shuffledTeams.forEach((team, index) => {
-        // Randomly select one member to highlight
+    // Create all team cards first with placeholder numbers
+    const teamCards = shuffledTeams.map((team, index) => {
         const randomMemberIndex = Math.floor(Math.random() * team.members.length);
-        
-        const teamCard = createTeamCard(team, index + 1, randomMemberIndex);
-        teamsContainer.appendChild(teamCard);
+        const card = createTeamCard(team, '?', -1); // Start with '?' and no highlight
+        card.dataset.finalNumber = index + 1;
+        card.dataset.highlightIndex = randomMemberIndex;
+        card.dataset.teamIndex = index;
+        teamsContainer.appendChild(card);
+        return card;
     });
+    
+    // Start the number shuffling animation
+    teamCards.forEach((card, index) => {
+        animateTeamNumber(card, parseInt(card.dataset.finalNumber), index);
+    });
+    
+    // After number animation completes, start member selection animation
+    setTimeout(() => {
+        teamCards.forEach((card, index) => {
+            animateMemberSelection(card, parseInt(card.dataset.highlightIndex), shuffledTeams[index].members.length);
+        });
+    }, 2000); // Wait for number animation to finish
+}
+
+// Animate team number shuffling
+function animateTeamNumber(card, finalNumber, cardIndex) {
+    const badge = card.querySelector('.team-badge');
+    const numberSpan = badge.querySelector('.team-badge-number');
+    
+    badge.classList.add('shuffling');
+    
+    let iterations = 0;
+    const maxIterations = 15 + (cardIndex * 2); // Stagger the animation slightly
+    
+    const shuffleInterval = setInterval(() => {
+        // Show random number during shuffle
+        const randomNum = Math.floor(Math.random() * 6) + 1;
+        numberSpan.textContent = randomNum;
+        
+        iterations++;
+        
+        if (iterations >= maxIterations) {
+            clearInterval(shuffleInterval);
+            // Show final number
+            numberSpan.textContent = finalNumber;
+            badge.classList.remove('shuffling');
+        }
+    }, 80);
+}
+
+// Animate member selection with scroll effect
+function animateMemberSelection(card, finalIndex, totalMembers) {
+    const members = card.querySelectorAll('.member');
+    
+    let currentIndex = 0;
+    let iterations = 0;
+    const maxIterations = 20 + Math.floor(Math.random() * 10); // Random duration
+    
+    const scrollInterval = setInterval(() => {
+        // Remove previous selection highlight
+        members.forEach(m => {
+            m.classList.remove('selecting', 'scrolling');
+        });
+        
+        // Add scrolling effect to current member
+        members[currentIndex].classList.add('scrolling', 'selecting');
+        
+        // Move to next member
+        currentIndex = (currentIndex + 1) % totalMembers;
+        iterations++;
+        
+        if (iterations >= maxIterations) {
+            clearInterval(scrollInterval);
+            
+            // Remove all selecting classes
+            members.forEach(m => {
+                m.classList.remove('selecting', 'scrolling');
+            });
+            
+            // Add final highlight with animation
+            setTimeout(() => {
+                members[finalIndex].classList.add('highlighted');
+            }, 200);
+        }
+    }, 100);
 }
 
 // Create team card HTML
@@ -98,7 +175,9 @@ function createTeamCard(team, displayNumber, highlightedMemberIndex) {
     card.innerHTML = `
         <div class="team-header">
             <h2 class="team-name">${team.name}</h2>
-            <div class="team-badge">Team ${displayNumber}</div>
+            <div class="team-badge">
+                <span class="team-badge-number">Team ${displayNumber}</span>
+            </div>
         </div>
         <div class="team-domain">${team.domain}</div>
         <div class="team-topics">

@@ -4,19 +4,21 @@ A modern, interactive website to display DArtB team assignments with dynamic vis
 
 ## Features
 
-- 🎲 **Random Team Numbering** - Teams are shuffled and numbered 1-6 randomly on each page load
+- 🎲 **Animated Team Number Shuffling** - Team numbers rapidly shuffle before revealing final assignment (1-6)
+- 🎰 **Slot Machine Member Selection** - Names scroll through before highlighting the selected member
 - ⭐ **Random Member Highlighting** - One member per team is randomly highlighted with golden accent
 - 🎨 **Deep blue and purple theme** with white accents
 - 📱 **Fully responsive** design
 - ✨ **Interactive 3D card effects** on hover
-- 🚀 **Instant loading** - All teams displayed simultaneously
+- 💫 **Smooth animations** - Engaging visual effects throughout
 
 ## How to Use
 
 1. Open `index.html` in a modern web browser
-2. Teams will automatically load and display with:
-   - Random team numbering (1-6)
-   - One randomly highlighted member per team (shown in gold)
+2. Watch the animations:
+   - **First 2 seconds**: Team numbers shuffle rapidly before settling on final assignments (1-6)
+   - **Next 2-3 seconds**: Member names scroll through like a slot machine
+   - **Final reveal**: One randomly selected member per team is highlighted in gold
 
 ## Files
 
@@ -41,9 +43,11 @@ Works best in modern browsers:
   - Domain and topics
   - Member count statistics
   - Detailed member information (name, generation, role, details)
-- One randomly highlighted member per team (golden accent)
-- Simultaneous reveal of all teams
-- 3D hover effects
+- **Animated reveals**:
+  - Team badges pulse and shuffle through numbers (15-20 iterations)
+  - Member names scroll through with visual highlighting effect
+  - Final selected member revealed with golden glow animation
+- 3D hover effects on cards
 - Smooth fade-in animations
 
 ### Visual Theme
@@ -53,12 +57,29 @@ Works best in modern browsers:
 - Golden (#fbbf24) for highlighted members
 - Glowing effects and shadows
 
-## Randomization
+## Animations & Randomization
 
-The page implements two types of randomization on each load:
+The page implements exciting animations and randomization on each load:
 
-1. **Team Numbers**: Teams are shuffled using Fisher-Yates algorithm, then assigned numbers 1-6
-2. **Highlighted Members**: One random member per team is selected and highlighted with golden styling
+### Team Number Shuffling
+- Teams are shuffled using Fisher-Yates algorithm
+- Badge numbers rapidly cycle through 1-6 (15-20+ iterations)
+- Pulse/scale animation during shuffle
+- Each card staggers slightly for dynamic effect
+- Duration: ~2 seconds
+
+### Member Selection Animation
+- Slot machine-style scroll through all members
+- Each member briefly highlights as the "selector" passes through
+- 20-30 iterations of scrolling
+- Random speed variation per team
+- Golden reveal animation on final selection
+- Duration: ~2-3 seconds
+
+### Visual Effects
+- Scrolling members: opacity fade and vertical translation
+- Final highlight: scale, glow, and position animation
+- Smooth transitions throughout
 
 ## Team Information
 
