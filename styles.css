@@ -23,131 +23,6 @@ body {
     color: var(--white);
 }
 
-.screen {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-
-.screen.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* ========== Login Screen ========== */
-#login-screen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
-}
-
-.login-container {
-    text-align: center;
-    z-index: 10;
-    animation: fadeInUp 1s ease;
-}
-
-.logo-container {
-    margin-bottom: 3rem;
-}
-
-.logo-text {
-    font-size: 5rem;
-    font-weight: 900;
-    background: linear-gradient(135deg, var(--white), var(--light-purple));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: 0 0 40px var(--glow-purple);
-    animation: pulse 2s ease-in-out infinite;
-}
-
-.subtitle {
-    font-size: 1.5rem;
-    color: var(--light-purple);
-    margin-top: 1rem;
-    letter-spacing: 3px;
-}
-
-.login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
-}
-
-#password-input {
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid var(--purple);
-    border-radius: 50px;
-    color: var(--white);
-    outline: none;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-    width: 300px;
-    text-align: center;
-}
-
-#password-input:focus {
-    border-color: var(--light-purple);
-    box-shadow: 0 0 20px var(--glow-purple);
-    transform: scale(1.05);
-}
-
-#password-input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-#login-btn {
-    padding: 1rem 3rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    background: linear-gradient(135deg, var(--purple), var(--deep-purple));
-    border: none;
-    border-radius: 50px;
-    color: var(--white);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px var(--glow-purple);
-}
-
-#login-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 25px var(--glow-purple);
-}
-
-#login-btn:active {
-    transform: translateY(-1px);
-}
-
-.error-message {
-    color: #ff6b6b;
-    font-size: 0.9rem;
-    min-height: 20px;
-    animation: shake 0.5s ease;
-}
-
-/* Particles Background */
-.particles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.particle {
-    position: absolute;
-    background: var(--white);
-    border-radius: 50%;
-    animation: float 15s infinite;
-    opacity: 0.3;
-}
-
 /* ========== Teams Screen ========== */
 #teams-screen {
     padding: 2rem;
@@ -194,13 +69,8 @@ body {
     backdrop-filter: blur(10px);
     position: relative;
     overflow: hidden;
-    opacity: 0;
-    transform: scale(0.5) rotateY(180deg);
+    animation: fadeInScale 0.8s ease forwards;
     transition: all 0.3s ease;
-}
-
-.team-card.reveal {
-    animation: explodeIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
 }
 
 .team-card:hover {
@@ -309,41 +179,24 @@ body {
     font-size: 0.8rem;
 }
 
-.logout-btn {
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    padding: 0.8rem 2rem;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid var(--purple);
-    border-radius: 50px;
-    color: var(--white);
-    cursor: pointer;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-    font-weight: 600;
+/* Highlighted Member */
+.member.highlighted {
+    background: linear-gradient(135deg, rgba(107, 70, 193, 0.4), rgba(147, 51, 234, 0.4));
+    border-left-color: #fbbf24;
+    border-left-width: 5px;
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+    transform: translateX(10px) scale(1.05);
 }
 
-.logout-btn:hover {
-    background: var(--purple);
-    transform: scale(1.05);
-    box-shadow: 0 0 20px var(--glow-purple);
+.member.highlighted .member-name {
+    color: #fbbf24;
+    font-weight: 900;
+    text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
 }
 
-/* Explosion Effect */
-.explosion {
-    position: absolute;
-    pointer-events: none;
-}
-
-.explosion-particle {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background: var(--light-purple);
-    border-radius: 50%;
-    animation: explode 1s ease-out forwards;
-    box-shadow: 0 0 10px var(--glow-purple);
+.member.highlighted .member-generation {
+    background: #fbbf24;
+    color: var(--deep-purple);
 }
 
 /* ========== Animations ========== */
@@ -384,48 +237,20 @@ body {
     75% { transform: translateX(10px); }
 }
 
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0) translateX(0);
-    }
-    25% {
-        transform: translateY(-100px) translateX(50px);
-    }
-    50% {
-        transform: translateY(-200px) translateX(-50px);
-    }
-    75% {
-        transform: translateY(-100px) translateX(100px);
-    }
-}
 
-@keyframes explodeIn {
-    0% {
+@keyframes fadeInScale {
+    from {
         opacity: 0;
-        transform: scale(0.3) rotateY(180deg);
+        transform: scale(0.9);
     }
-    50% {
-        transform: scale(1.1) rotateY(90deg);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) rotateY(0deg);
-    }
-}
-
-@keyframes explode {
     to {
-        transform: translate(var(--tx), var(--ty));
-        opacity: 0;
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
 /* ========== Responsive Design ========== */
 @media (max-width: 768px) {
-    .logo-text {
-        font-size: 3rem;
-    }
-    
     .main-title {
         font-size: 2.5rem;
     }
@@ -438,21 +263,9 @@ body {
     .team-card {
         padding: 1.5rem;
     }
-    
-    #password-input {
-        width: 250px;
-    }
 }
 
 @media (max-width: 480px) {
-    .logo-text {
-        font-size: 2.5rem;
-    }
-    
-    .subtitle {
-        font-size: 1rem;
-    }
-    
     .main-title {
         font-size: 2rem;
     }
